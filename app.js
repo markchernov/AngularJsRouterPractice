@@ -58,3 +58,22 @@ myApp.controller('secondController', ['$scope', '$log', '$routeParams', 'nameSer
     });
     
 }]);
+
+myApp.directive('searchResult', function() {
+
+return {                
+
+   restrict: 'AE'   ,  // 'A' use only when replacing attributes, 'E' replacing elements, 'C' replacing CSS classes, 'M' comment
+
+// A    <search-result></search-result>
+// E    <div search-result></div>
+// C    <div class="search-result"></div>
+// M    <!-- directive: search-result -->
+
+   templateUrl: 'directives/searchresults.html'   ,
+
+   replace: true   // to replace custom directive element
+}
+
+});
+
