@@ -14,8 +14,16 @@
 
 <h3>Search Results</h3>
 
-<div class="list-group">
+<div class="list-group" >
 
-      <search-result>  </search-result>
+      <!--<search-result person-name="{{ person.name }}" person-address="{{ person.address }}">  </search-result>   -->
+      <!--sharing parent controller scope with this directive by using attributes-->
+
+      <search-result person-object="person" formatted-address-function="formattedAddress(a_person)" ng-repeat="person in people">  
+            
+            *transcluded text
+            
+      </search-result>   
+      <!--sharing parent controller scope with this directive by using attributes with whole object-->
 
 </div>      
